@@ -6,7 +6,7 @@
     <title>Diniz Odontologia | Clínica Odontológica em Fátima do Sul - MS</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts: Montserrat & Inter -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet">
@@ -27,7 +27,6 @@
                             800: '#5c0b10',
                             900: '#48090d',
                         },
-                        accentGold: '#d97706',
                     },
                     fontFamily: {
                         heading: ['Montserrat', 'sans-serif'],
@@ -38,41 +37,21 @@
         }
     </script>
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        .hero-pattern {
+        body { font-family: 'Inter', sans-serif; }
+        .hero-bg {
             background-color: #720e14;
-            background-image: radial-gradient(circle at 80% 20%, rgba(217, 119, 6, 0.2) 0%, rgba(114, 14, 20, 0.98) 65%);
+            background-image: radial-gradient(circle at 85% 15%, rgba(217, 119, 6, 0.25) 0%, rgba(114, 14, 20, 0.98) 65%);
         }
-        .dental-card {
-            transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        .dental-card:hover {
-            transform: translateY(-6px);
-        }
-        .img-zoom {
-            transition: transform 0.5s ease;
-        }
-        .dental-card:hover .img-zoom {
-            transform: scale(1.08);
-        }
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #f1f5f9;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #a81c24;
-            border-radius: 4px;
-        }
+        .card-hover { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .card-hover:hover { transform: translateY(-5px); }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f5f9; }
+        ::-webkit-scrollbar-thumb { background: #a81c24; border-radius: 4px; }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800 antialiased selection:bg-brandBurgundy-600 selection:text-white">
 
-    <!-- Top Contact Bar -->
-    <div class="bg-brandBurgundy-900 text-white text-xs sm:text-sm py-2.5 px-4">
+    <div class="bg-brandBurgundy-900 text-white text-xs sm:text-sm py-2 px-4 border-b border-brandBurgundy-800">
         <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
             <div class="flex items-center gap-4 flex-wrap">
                 <span class="flex items-center gap-1.5 font-medium">
@@ -87,7 +66,7 @@
             <div class="flex items-center gap-3">
                 <span class="inline-flex items-center gap-1 bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 px-2.5 py-0.5 rounded-full text-[11px] font-semibold">
                     <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                    Aberto Hoje até 21:00
+                    Atendimento Noturno
                 </span>
                 <a href="tel:5567999298595" class="hover:text-amber-300 font-bold flex items-center gap-1">
                     <i class="fa-solid fa-phone"></i> (67) 99929-8595
@@ -96,166 +75,141 @@
         </div>
     </div>
 
-    <!-- Main Header -->
     <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            
-            <!-- Logo -->
             <a href="#" class="flex items-center gap-3">
-                <div class="w-12 h-12 rounded-xl bg-brandBurgundy-700 flex items-center justify-center text-white shadow-lg shadow-brandBurgundy-700/20">
-                    <i class="fa-solid fa-tooth text-2xl"></i>
+                <div class="w-11 h-11 rounded-xl bg-brandBurgundy-700 flex items-center justify-center text-white shadow-md shadow-brandBurgundy-700/20">
+                    <i class="fa-solid fa-tooth text-xl"></i>
                 </div>
                 <div>
-                    <span class="block text-xl sm:text-2xl font-heading font-black text-brandBurgundy-800 tracking-tight leading-none">
-                        DINIZ
-                    </span>
-                    <span class="block text-[11px] font-bold tracking-widest text-slate-500 uppercase mt-0.5">
-                        ODONTOLOGIA
-                    </span>
+                    <span class="block text-xl font-heading font-black text-brandBurgundy-800 tracking-tight leading-none">DINIZ</span>
+                    <span class="block text-[10px] font-bold tracking-widest text-slate-500 uppercase mt-0.5">ODONTOLOGIA</span>
                 </div>
             </a>
 
-            <!-- Desktop Nav Links -->
-            <nav class="hidden md:flex items-center gap-7 text-sm font-semibold text-slate-700">
+            <nav class="hidden md:flex items-center gap-6 text-xs lg:text-sm font-semibold text-slate-700">
                 <a href="#inicio" class="hover:text-brandBurgundy-700 transition">Início</a>
                 <a href="#servicos" class="hover:text-brandBurgundy-700 transition">Tratamentos</a>
                 <a href="#galeria" class="hover:text-brandBurgundy-700 transition">Estrutura</a>
                 <a href="#sobre" class="hover:text-brandBurgundy-700 transition">A Clínica</a>
                 <a href="#avaliacoes" class="hover:text-brandBurgundy-700 transition">Avaliações (4.8 ★)</a>
-                <a href="#horarios" class="hover:text-brandBurgundy-700 transition">Horários & Local</a>
+                <a href="#horarios" class="hover:text-brandBurgundy-700 transition">Contato & Horários</a>
             </nav>
 
-            <!-- CTA Header Button -->
-            <div class="flex items-center gap-3">
-                <a href="https://wa.me/5567999298595?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20na%20Diniz%20Odontologia." target="_blank" class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-xs uppercase tracking-wider transition shadow-md hover:shadow-lg">
+            <div class="flex items-center gap-2">
+                <a href="https://wa.me/5567999298595?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20na%20Diniz%20Odontologia." target="_blank" class="hidden sm:inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-xs uppercase tracking-wider transition shadow-md">
                     <i class="fa-brands fa-whatsapp text-base"></i>
                     <span>Agendar WhatsApp</span>
                 </a>
-                
-                <!-- Mobile Menu Button -->
                 <button id="mobileMenuBtn" class="md:hidden text-slate-700 p-2 hover:bg-slate-100 rounded-lg">
                     <i class="fa-solid fa-bars text-xl"></i>
                 </button>
             </div>
         </div>
 
-        <!-- Mobile Navigation Drawer -->
-        <div id="mobileMenu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-3 pb-6 space-y-3">
-            <a href="#inicio" class="block py-2 text-slate-700 font-medium hover:text-brandBurgundy-700">Início</a>
-            <a href="#servicos" class="block py-2 text-slate-700 font-medium hover:text-brandBurgundy-700">Tratamentos</a>
-            <a href="#galeria" class="block py-2 text-slate-700 font-medium hover:text-brandBurgundy-700">Estrutura</a>
-            <a href="#sobre" class="block py-2 text-slate-700 font-medium hover:text-brandBurgundy-700">A Clínica</a>
-            <a href="#avaliacoes" class="block py-2 text-slate-700 font-medium hover:text-brandBurgundy-700">Avaliações (4.8 ★)</a>
-            <a href="#horarios" class="block py-2 text-slate-700 font-medium hover:text-brandBurgundy-700">Horários & Localização</a>
-            <a href="https://wa.me/5567999298595?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20na%20Diniz%20Odontologia." target="_blank" class="w-full mt-2 py-3 bg-emerald-600 text-white rounded-xl text-center font-bold flex items-center justify-center gap-2">
-                <i class="fa-brands fa-whatsapp text-lg"></i> Agendar pelo WhatsApp
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-3 pb-6 space-y-2">
+            <a href="#inicio" onclick="toggleMobileMenu()" class="block py-2 text-slate-700 font-medium hover:text-brandBurgundy-700">Início</a>
+            <a href="#servicos" onclick="toggleMobileMenu()" class="block py-2 text-slate-700 font-medium hover:text-brandBurgundy-700">Tratamentos</a>
+            <a href="#galeria" onclick="toggleMobileMenu()" class="block py-2 text-slate-700 font-medium hover:text-brandBurgundy-700">Estrutura</a>
+            <a href="#sobre" onclick="toggleMobileMenu()" class="block py-2 text-slate-700 font-medium hover:text-brandBurgundy-700">A Clínica</a>
+            <a href="#avaliacoes" onclick="toggleMobileMenu()" class="block py-2 text-slate-700 font-medium hover:text-brandBurgundy-700">Avaliações (4.8 ★)</a>
+            <a href="#horarios" onclick="toggleMobileMenu()" class="block py-2 text-slate-700 font-medium hover:text-brandBurgundy-700">Contato & Localização</a>
+            <a href="https://wa.me/5567999298595?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20na%20Diniz%20Odontologia." target="_blank" class="w-full mt-2 py-3 bg-emerald-600 text-white rounded-xl text-center font-bold flex items-center justify-center gap-2 text-xs uppercase">
+                <i class="fa-brands fa-whatsapp text-base"></i> Agendar pelo WhatsApp
             </a>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section id="inicio" class="relative hero-pattern text-white py-16 lg:py-24 overflow-hidden">
+    <section id="inicio" class="relative hero-bg text-white py-12 lg:py-20 overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="grid lg:grid-cols-12 gap-12 items-center">
+            <div class="grid lg:grid-cols-12 gap-8 items-center">
                 
-                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
-                    <!-- Rating Badge -->
-                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs sm:text-sm font-medium">
+                <div class="lg:col-span-7 space-y-5 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs font-medium">
                         <div class="flex text-amber-400">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                         </div>
                         <span class="font-bold text-white">4.8</span>
                         <span class="text-white/70">(22 avaliações no Google)</span>
                     </div>
 
-                    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-heading font-black tracking-tight leading-tight">
-                        Seu sorriso saudável em <span class="text-amber-400">Fátima do Sul - MS</span>
+                    <h1 class="text-3xl sm:text-5xl font-heading font-black tracking-tight leading-tight">
+                        Seu sorriso renovado em <span class="text-amber-400">Fátima do Sul - MS</span>
                     </h1>
 
-                    <p class="text-base sm:text-lg text-slate-200 max-w-2xl leading-relaxed mx-auto lg:mx-0">
-                        Atendimento odontológico humanizado, equipamentos modernos e flexibilidade total com atendimento estendido até às 21h.
+                    <p class="text-sm sm:text-base text-slate-200 max-w-xl leading-relaxed mx-auto lg:mx-0">
+                        Atendimento odontológico humanizado, estrutura moderna e flexibilidade com atendimento noturno estendido até às 21:00.
                     </p>
 
-                    <!-- Quick Highlights -->
-                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2 text-left text-xs sm:text-sm">
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-1 text-left text-xs">
                         <div class="bg-white/10 p-3 rounded-xl border border-white/10 backdrop-blur-sm">
-                            <i class="fa-solid fa-clock text-amber-400 text-lg mb-1 block"></i>
-                            <strong class="block text-white">Atendimento Noturno</strong>
-                            <span class="text-slate-300 text-xs">Até às 21:00</span>
+                            <i class="fa-solid fa-moon text-amber-400 text-base mb-1 block"></i>
+                            <strong class="block text-white">Até às 21:00</strong>
+                            <span class="text-slate-300">Mais praticidade</span>
                         </div>
                         <div class="bg-white/10 p-3 rounded-xl border border-white/10 backdrop-blur-sm">
-                            <i class="fa-solid fa-location-dot text-amber-400 text-lg mb-1 block"></i>
-                            <strong class="block text-white">Fácil Acesso</strong>
-                            <span class="text-slate-300 text-xs">Av. 9 de Julho</span>
+                            <i class="fa-solid fa-location-dot text-amber-400 text-base mb-1 block"></i>
+                            <strong class="block text-white">Av. 9 de Julho</strong>
+                            <span class="text-slate-300">Fácil localização</span>
                         </div>
                         <div class="col-span-2 sm:col-span-1 bg-white/10 p-3 rounded-xl border border-white/10 backdrop-blur-sm">
-                            <i class="fa-solid fa-user-check text-amber-400 text-lg mb-1 block"></i>
+                            <i class="fa-solid fa-user-check text-amber-400 text-base mb-1 block"></i>
                             <strong class="block text-white">Atenção Dedicada</strong>
-                            <span class="text-slate-300 text-xs">Equipe experiente</span>
+                            <span class="text-slate-300">Equipe qualificada</span>
                         </div>
                     </div>
 
-                    <!-- Call to Action Buttons -->
-                    <div class="flex flex-col sm:flex-row gap-4 pt-4 justify-center lg:justify-start">
-                        <a href="https://wa.me/5567999298595?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20na%20Diniz%20Odontologia." target="_blank" class="px-8 py-4 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white font-heading font-bold text-sm uppercase tracking-wider shadow-xl shadow-emerald-900/40 transition flex items-center justify-center gap-3">
-                            <i class="fa-brands fa-whatsapp text-2xl"></i>
+                    <div class="flex flex-col sm:flex-row gap-3 pt-3 justify-center lg:justify-start">
+                        <a href="https://wa.me/5567999298595?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20na%20Diniz%20Odontologia." target="_blank" class="px-6 py-3.5 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white font-heading font-bold text-xs uppercase tracking-wider shadow-lg shadow-emerald-900/40 transition flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-xl"></i>
                             <span>Agendar Avaliação</span>
                         </a>
-                        <button onclick="openBookingModal()" class="px-8 py-4 rounded-xl bg-white/15 hover:bg-white/25 border border-white/30 text-white font-heading font-semibold text-sm transition flex items-center justify-center gap-2">
+                        <button onclick="openModal()" class="px-6 py-3.5 rounded-xl bg-white/15 hover:bg-white/25 border border-white/30 text-white font-heading font-semibold text-xs transition flex items-center justify-center gap-2">
                             <i class="fa-regular fa-calendar-check"></i>
-                            <span>Simular Agendamento</span>
+                            <span>Solicitar Agendamento</span>
                         </button>
                     </div>
-
                 </div>
 
-                <!-- Hero Photo Showcase Card -->
                 <div class="lg:col-span-5 flex justify-center">
-                    <div class="relative w-full max-w-md bg-white rounded-3xl p-3 text-slate-800 shadow-2xl border border-white/20">
-                        <div class="relative h-72 w-full rounded-2xl overflow-hidden shadow-md">
-                            <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80" alt="Consultório Diniz Odontologia Fátima do Sul" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/800x600/720e14/ffffff?text=Diniz+Odontologia'">
+                    <div class="w-full max-w-md bg-white rounded-2xl p-3 text-slate-800 shadow-2xl border border-white/20">
+                        <div class="relative h-60 w-full rounded-xl overflow-hidden shadow-sm">
+                            <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80" alt="Diniz Odontologia Fátima do Sul" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/800x600/720e14/ffffff?text=Diniz+Odontologia'">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                             
-                            <!-- Floating Badge on Image -->
-                            <div class="absolute top-3 left-3 bg-brandBurgundy-800/90 backdrop-blur-md text-white px-3 py-1.5 rounded-xl border border-white/20 text-xs font-bold flex items-center gap-2">
+                            <div class="absolute top-3 left-3 bg-brandBurgundy-800/90 text-white px-2.5 py-1 rounded-lg border border-white/20 text-[11px] font-bold flex items-center gap-1.5">
                                 <i class="fa-solid fa-tooth text-amber-400"></i>
-                                <span>Atendimento Odontológico</span>
+                                <span>Clínica Odontológica</span>
                             </div>
 
-                            <div class="absolute bottom-4 left-4 right-4 text-white">
-                                <span class="text-amber-300 text-xs font-bold uppercase tracking-wider block">Fátima do Sul - MS</span>
-                                <h2 class="font-heading font-black text-xl leading-tight">Diniz Odontologia</h2>
-                                <p class="text-xs text-slate-200 mt-1 flex items-center gap-2">
+                            <div class="absolute bottom-3 left-3 right-3 text-white">
+                                <span class="text-amber-300 text-[10px] font-bold uppercase tracking-wider block">Fátima do Sul - MS</span>
+                                <h2 class="font-heading font-black text-lg">Diniz Odontologia</h2>
+                                <p class="text-xs text-slate-200 flex items-center gap-1 mt-0.5">
                                     <i class="fa-solid fa-phone text-emerald-400"></i> (67) 99929-8595
                                 </p>
                             </div>
                         </div>
 
-                        <div class="p-4 space-y-3 text-xs sm:text-sm">
-                            <div class="flex items-start gap-3 p-3 rounded-xl bg-slate-50 border border-slate-100">
-                                <i class="fa-solid fa-map-location-dot text-brandBurgundy-700 text-lg mt-0.5"></i>
+                        <div class="p-3 space-y-2 text-xs">
+                            <div class="flex items-center gap-2.5 p-2.5 rounded-lg bg-slate-50 border border-slate-100">
+                                <i class="fa-solid fa-map-location-dot text-brandBurgundy-700 text-base shrink-0"></i>
                                 <div>
-                                    <strong class="block text-slate-900 font-bold">Endereço Completo:</strong>
+                                    <strong class="block text-slate-900">Endereço:</strong>
                                     <span class="text-slate-600">Av. 9 de Julho, 1435 - Fátima do Sul - MS</span>
                                 </div>
                             </div>
-
-                            <div class="flex items-start gap-3 p-3 rounded-xl bg-slate-50 border border-slate-100">
-                                <i class="fa-solid fa-clock text-brandBurgundy-700 text-lg mt-0.5"></i>
+                            <div class="flex items-center gap-2.5 p-2.5 rounded-lg bg-slate-50 border border-slate-100">
+                                <i class="fa-solid fa-clock text-brandBurgundy-700 text-base shrink-0"></i>
                                 <div>
-                                    <strong class="block text-slate-900 font-bold">Horário Estendido:</strong>
-                                    <span class="text-slate-600 block">Segunda a Sexta: 08:00 – 21:00</span>
-                                    <span class="text-slate-600 block">Sábado: 08:00 – 12:00</span>
+                                    <strong class="block text-slate-900">Funcionamento:</strong>
+                                    <span class="text-slate-600">Seg a Sex: 08:00 - 21:00 | Sáb: 08:00 - 12:00</span>
                                 </div>
                             </div>
                         </div>
 
-                        <a href="https://maps.google.com/?q=Av.+9+de+Julho,+1435,+Fatima+do+Sul+-+MS" target="_blank" class="w-full py-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold uppercase tracking-wider text-center block transition">
-                            <i class="fa-solid fa-directions mr-1.5 text-amber-400"></i> Abrir no Google Maps
+                        <a href="https://maps.google.com/?q=Av.+9+de+Julho,+1435,+Fatima+do+Sul+-+MS" target="_blank" class="w-full py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold uppercase tracking-wider text-center block transition">
+                            <i class="fa-solid fa-directions mr-1 text-amber-400"></i> Abrir no Google Maps
                         </a>
                     </div>
                 </div>
@@ -264,54 +218,70 @@
         </div>
     </section>
 
-    <!-- Treatments Section -->
-    <section id="servicos" class="py-16 sm:py-24 bg-white border-b border-slate-200">
+    <section id="servicos" class="py-12 sm:py-20 bg-white border-b border-slate-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            
-            <div class="text-center max-w-2xl mx-auto mb-12 space-y-3">
+            <div class="text-center max-w-2xl mx-auto mb-10 space-y-2">
                 <span class="text-xs font-bold uppercase tracking-widest text-brandBurgundy-600 bg-brandBurgundy-50 px-3 py-1 rounded-full border border-brandBurgundy-100">
-                    Especialidades Odontológicas
+                    Tratamentos Oferecidos
                 </span>
-                <h2 class="text-3xl sm:text-4xl font-heading font-black text-slate-900">
-                    Cuidados Especiais Para o Seu Sorriso
+                <h2 class="text-2xl sm:text-3xl font-heading font-black text-slate-900">
+                    Especialidades Odontológicas
                 </h2>
-                <p class="text-sm text-slate-600">
-                    Soluções estéticas, preventivas e ortodônticas com alto padrão de qualidade em Fátima do Sul.
+                <p class="text-xs sm:text-sm text-slate-600">
+                    Cuidados preventivos, estéticos e restauradores com a qualidade que seu sorriso merece.
                 </p>
             </div>
 
-            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
                 
-                <!-- Treatment Card 1 -->
-                <div class="dental-card bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl flex flex-col justify-between">
+                <!-- Treatment 1 -->
+                <div class="card-hover bg-slate-50 rounded-xl border border-slate-200 overflow-hidden shadow-sm flex flex-col justify-between">
                     <div>
-                        <div class="relative h-48 w-full overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=600&q=80" alt="Clareamento Dental Diniz Odontologia" class="w-full h-full object-cover img-zoom" onerror="this.src='https://placehold.co/600x400/720e14/ffffff?text=Clareamento+Dental'">
-                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent"></div>
-                            <span class="absolute top-3 left-3 bg-white/90 backdrop-blur-md text-brandBurgundy-800 text-[11px] font-bold px-2.5 py-1 rounded-lg">Estética Bucal</span>
+                        <div class="relative h-40 w-full overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=600&q=80" alt="Clareamento Dental" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/600x400/720e14/ffffff?text=Clareamento'">
+                            <span class="absolute top-2 left-2 bg-white/90 text-brandBurgundy-800 text-[10px] font-bold px-2 py-0.5 rounded-md">Estética</span>
                         </div>
-                        <div class="p-6">
-                            <div class="w-10 h-10 rounded-xl bg-brandBurgundy-700/10 text-brandBurgundy-700 flex items-center justify-center text-xl mb-3">
-                                <i class="fa-solid fa-sparkles"></i>
-                            </div>
-                            <h3 class="font-heading font-bold text-slate-900 text-lg mb-2">Clareamento Dental</h3>
+                        <div class="p-4">
+                            <h3 class="font-heading font-bold text-slate-900 text-base mb-1">Clareamento Dental</h3>
                             <p class="text-xs text-slate-600 leading-relaxed">
-                                Dentes visivelmente mais brancos e radiantes com técnicas seguras, duradouras e sem sensibilidade excessiva.
+                                Sorriso mais claro e brilhante com técnicas modernas e acompanhamento profissional.
                             </p>
                         </div>
                     </div>
-                    <div class="px-6 pb-6">
-                        <a href="https://wa.me/5567999298595?text=Gostaria%20de%20saber%20mais%20sobre%20Clareamento%20Dental" target="_blank" class="w-full py-2.5 rounded-xl bg-brandBurgundy-700 hover:bg-brandBurgundy-800 text-white text-xs font-bold transition flex items-center justify-center gap-1.5">
+                    <div class="p-4 pt-0">
+                        <a href="https://wa.me/5567999298595?text=Gostaria%20de%20informA%C3%A7%C3%B5es%20sobre%20Clareamento%20Dental" target="_blank" class="w-full py-2 rounded-lg bg-brandBurgundy-700 hover:bg-brandBurgundy-800 text-white text-xs font-bold transition flex items-center justify-center gap-1">
                             <span>Saber Mais</span>
-                            <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                            <i class="fa-solid fa-chevron-right text-[10px]"></i>
                         </a>
                     </div>
                 </div>
 
-                <!-- Treatment Card 2 -->
-                <div class="dental-card bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl flex flex-col justify-between">
+                <!-- Treatment 2 -->
+                <div class="card-hover bg-slate-50 rounded-xl border border-slate-200 overflow-hidden shadow-sm flex flex-col justify-between">
                     <div>
-                        <div class="relative h-48 w-full overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=600&q=80" alt="Ortodontia e Aparelhos Dental" class="w-full h-full object-cover img-zoom" onerror="this.src='https://placehold.co/600x400/720e14/ffffff?text=Ortodontia'">
-                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent"></div>
-                            <span class="absolute top-3 left-3 b
+                        <div class="relative h-40 w-full overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=600&q=80" alt="Ortodontia" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/600x400/720e14/ffffff?text=Ortodontia'">
+                            <span class="absolute top-2 left-2 bg-white/90 text-brandBurgundy-800 text-[10px] font-bold px-2 py-0.5 rounded-md">Ortodontia</span>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-heading font-bold text-slate-900 text-base mb-1">Aparelhos Ortodônticos</h3>
+                            <p class="text-xs text-slate-600 leading-relaxed">
+                                Alinhamento dos dentes e correção da mordida para crianças, jovens e adultos.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-4 pt-0">
+                        <a href="https://wa.me/5567999298595?text=Gostaria%20de%20informA%C3%A7%C3%B5es%20sobre%20Ortodontia" target="_blank" class="w-full py-2 rounded-lg bg-brandBurgundy-700 hover:bg-brandBurgundy-800 text-white text-xs font-bold transition flex items-center justify-center gap-1">
+                            <span>Saber Mais</span>
+                            <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Treatment 3 -->
+                <div class="card-hover bg-slate-50 rounded-xl border border-slate-200 overflow-hidden shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="relative h-40 w-full overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=600&q=80" alt="Implantes e Próteses" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/600x400/720e14/ffffff?text=Implantes'">
+                            <span class="absolute top-2 left-2 bg-white/90 text-brandBurgundy-800 text-[10px] font-bold px-2 py-0.5 rounded-md">Próteses</span>
+              
